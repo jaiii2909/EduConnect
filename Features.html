@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+    <section class="Sub-header">
+        <nav>
+            <a href="index.html" ><img src="images/logo.png" alt="Mentor Connect Logo"></a>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-times"  onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Features.html">Features</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="Showmenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Features</h1>
+    </section>
+
+
+    <section class="features">
+        <p>Explore the amazing features of Mentor Connect</p>
+        <div class="row">
+            <div class="features-col">
+                <h3>Connect with Experts</h3>
+                <p>Find and connect with industry experts who can guide you on your journey.</p>
+            </div>
+            <div class="features-col">
+                <h3>Personalized Guidance</h3>
+                <p>Receive personalized guidance tailored to your specific needs and goals.</p>
+            </div>
+            <div class="features-col">
+                <h3>Networking Opportunities</h3>
+                <p>Expand your professional network and open doors to new opportunities.</p>
+            </div>
+        </div>
+
+
+        <div class="row2">
+            <div class="features-col">
+                <h3>Resource Hub</h3>
+                <p>Get access to mentor-recommended resources, toolkits, and learning paths.</p>
+            </div>
+            <div class="features-col">
+                <h3>Mentorship Calendar</h3>
+                <p>Plan and manage mentorship sessions easily with our built-in scheduling tool.</p>
+            </div>
+            <div class="features-col">
+                <h3>Group Mentorship Events</h3>
+                <p>Join live group sessions and interactive Q&As with professionals from your field.</p>
+            </div>
+        </div>
+
+
+    <div class="row3">
+        <div class="features-col">
+            <h3>AI Mentor Matching</h3>
+            <p>Find the perfect mentor with our intelligent algorithm that aligns your goals and skills.</p>
+        </div>
+        <div class="features-col">
+            <h3>One-on-One Video Sessions</h3>
+            <p>Schedule secure and direct video calls with your mentor for personalized guidance.</p>
+        </div>
+        <div class="features-col">
+            <h3>Skill Badges & Progress</h3>
+            <p>Track your learning journey and earn badges as you grow with expert mentorship.</p>
+        </div>
+    </div>
+
+    </section>
+
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>We are a team of passionate individuals dedicated to connecting mentors and mentees for a brighter future.</p>
+        <div class="social-links">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-youtube"></i>
+
+        </div>
+
+        <p> Made with <i class="fa fa-heart"></i> by CTRL + EDU</p>
+    </section>
+
+
+    <script>
+       var navLinks = document.getElementById("nav-links");
+       function Showmenu() {
+           navLinks.style.right = "0";
+       }
+         function hidemenu() {
+              navLinks.style.right = "-200px";
+         }
+    </script>
+</body>
+</html>

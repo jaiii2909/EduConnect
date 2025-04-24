@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentee Dashboard - Mentor Connect</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #ffe4e6, #fef9c3);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+
+    header h1 {
+      font-size: 1.875rem;
+      font-weight: 800;
+      color: #db2777;
+    }
+
+    .navbar-buttons button {
+      margin-left: 1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .navbar-buttons button:nth-child(1) {
+      color: #db2777;
+    }
+
+    .navbar-buttons button:nth-child(1):hover {
+      color: #9d174d;
+    }
+
+    .navbar-buttons button:nth-child(2) {
+      color: #4b5563;
+    }
+
+    .navbar-buttons button:nth-child(2):hover {
+      color: #1f2937;
+    }
+
+    .navbar-buttons button:nth-child(3) {
+      color: #ef4444;
+    }
+
+    .navbar-buttons button:nth-child(3):hover {
+      color: #b91c1c;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    main h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      background-color: #ffffff;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      border-top: 4px solid;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .card ul,
+    .card p {
+      color: #374151;
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    .pink-border {
+      border-color: #f472b6;
+    }
+
+    .purple-border {
+      border-color: #c084fc;
+    }
+
+    .yellow-border {
+      border-color: #fde047;
+    }
+
+    .pink-text {
+      color: #db2777;
+    }
+
+    .purple-text {
+      color: #7c3aed;
+    }
+
+    .yellow-text {
+      color: #eab308;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mentor Connect</h1>
+    <div class="navbar-buttons">
+      <button>Dashboard</button>
+      <button>Profile</button>
+      <button>Logout</button>
+    </div>
+  </header>
+
+  <main>
+    <h2>🎉 Welcome back, Mentee!</h2>
+    <div class="card-grid">
+      <!-- Upcoming Sessions Card -->
+      <div class="card pink-border">
+        <h3 class="pink-text">📅 Your Upcoming Sessions</h3>
+        <ul>
+          <li>• HTML Basics - April 24, 10 AM</li>
+          <li>• Soft Skills Training - April 26, 1 PM</li>
+          <li>• 1-on-1 Mentorship - April 28, 4 PM</li>
+        </ul>
+      </div>
+
+      <!-- Assigned Mentor Card -->
+      <div class="card purple-border">
+        <h3 class="purple-text">👨‍🏫 Your Mentor</h3>
+        <p>Name: Rahul Mehta</p>
+        <p>Expertise: Web Development</p>
+        <p>Email: rahul.mehta@example.com</p>
+      </div>
+
+      <!-- Announcements Card -->
+      <div class="card yellow-border">
+        <h3 class="yellow-text">📢 Announcements</h3>
+        <ul>
+          <li>• Submit your portfolio by April 30</li>
+          <li>• Participate in the April coding challenge</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

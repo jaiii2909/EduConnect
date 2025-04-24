@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 93vh;
+    padding: 20px;
+  }
+  
+  .role-container {
+    background: none;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 550px;
+  }
+  
+  .role-container h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+
+  .role-container h2{
+      color: whitesmoke;
+      margin-bottom: 4vh;
+  }
+  
+  .role-container p {
+    color: whitesmoke;
+    margin-bottom: 1.5rem;
+  }
+  
+  .role-toggle {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+  }
+  
+  .role-toggle button {
+    padding: 12px 20px;
+    border: 2px solid gray;
+    background: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .role-toggle button.active {
+    background: #f44336;
+    color: white;
+  }
+  
+  .role-display {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #444;    
+  }
+
+  .form-container label{
+      color:whitesmoke;
+  }
+  
+  #continueBtn {
+    background: #f44336;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #continueBtn:hover {
+    background: white;
+    color: #f44336;
+  }
+  
+  /* 🎯 Responsive for mobile */
+  @media (max-width: 480px) {
+    .role-container {
+      padding: 1.5rem;
+    }
+  
+    .role-toggle button {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  
+    #continueBtn {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+  

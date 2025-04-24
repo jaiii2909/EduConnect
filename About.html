@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+    <section class="Sub-header">
+        <nav>
+            <a href="index.html" ><img src="images/logo.png" alt="Mentor Connect Logo"></a>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-times"  onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Features.html">Features</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="Showmenu()"></i>
+        </nav>
+        <h1>About Us</h1>
+    </section>
+
+<section class="about">
+    <p style="color: grey;">Fueling futures through mentorship.</p><br><br>
+    <p style="border-radius: 10px; background-color: bisque; ">Eduford is a modern mentorship platform built to connect passionate learners with experienced mentors from all walks of life.<br></p>
+
+        <div class="row">
+
+            <div class="about-col">
+                <img src="images/london.png" alt="Mentor Image">
+                <div class="layer">
+                    <h3>MISSION</h3>
+                    <p>To empower learners and mentors by creating an inclusive digital platform that fosters knowledge-sharing, skill-building, and personal growth—no matter where you are.</p>
+                </div>
+        </div>
+
+        <div class="about-col">
+            <img src="images/washington.png" alt="Mentor Image">
+            <div class="layer">
+                <h3>VISION</h3>
+                <p>To become a global bridge of mentorship where education is democratized, accessible, and personalized for every individual striving to grow, learn, and lead.</p>
+            </div>
+    </div>
+  </section>
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="index.html" class="hero-btn">Explore Now</a>
+</div>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>We are a team of passionate individuals dedicated to connecting mentors and mentees for a brighter future.</p>
+        <div class="social-links">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-youtube"></i>
+
+        </div>
+
+        <p> Made with <i class="fa fa-heart"></i> by CTRL + EDU</p>
+    </section>
+
+
+    <script>
+       var navLinks = document.getElementById("nav-links");
+       function Showmenu() {
+           navLinks.style.right = "0";
+       }
+         function hidemenu() {
+              navLinks.style.right = "-200px";
+         }
+    </script>
+</body>
+</html>

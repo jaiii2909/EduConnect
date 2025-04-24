@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentor Connect - Resource Library</title>
+  <style>
+    :root {
+      --primary-color: #4e54c8;
+      --accent-color: #8f94fb;
+      --bg-color: #f4f4f9;
+      --text-color: #333;
+      --card-bg: #fff;
+      --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      margin: 0;
+      padding: 20px;
+      color: var(--text-color);
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .top-bar button {
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 20px;
+      background: var(--primary-color);
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .top-bar button:hover {
+      background: var(--accent-color);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    .search-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    #searchInput {
+      padding: 12px;
+      width: 320px;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      outline: none;
+      font-size: 1em;
+      box-shadow: var(--shadow);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #ffffff, #f1f1ff);
+      border-left: 5px solid var(--primary-color);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+      opacity: 0.05;
+      border-radius: 15px;
+      z-index: 0;
+    }
+
+    .card h3, .card p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--primary-color);
+      font-size: 1.4em;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <button onclick="location.href='index.html'">Home</button>
+    <button onclick="goToProfile()">My Profile</button>
+  </div>
+
+  <header>
+    <h1>Mentor Connect - Resource Library</h1>
+  </header>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search courses..." onkeyup="filterCourses()" />
+  </div>
+
+  <div class="grid" id="courseGrid">
+    <a href="WD.html" >
+    <div class="card">
+      <h3>Web Development</h3>
+      <p>Learn HTML, CSS, and JavaScript to build modern websites.</p>
+    </div>
+  </a>
+  <a href="DS.html" >
+    <div class="card">
+      <h3>Data Science</h3>
+      <p>Explore Python, pandas, machine learning, and more.</p>
+    </div>
+  </a>
+  <a href="UX.html" >
+    <div class="card">
+      <h3>UI/UX Design</h3>
+      <p>Design user-friendly interfaces using Figma and Adobe XD.</p>
+    </div>
+  </a>
+  <a href="CC.html" >
+    <div class="card">
+      <h3>Cloud Computing</h3>
+      <p>Understand AWS, Azure, and Google Cloud services.</p>
+    </div>
+  </a>
+
+  <a href="CS.html" >
+    <div class="card">
+      <h3>Cybersecurity</h3>
+      <p>Protect systems and networks from cyber threats.</p>
+    </div>
+  </a>
+  </div>
+
+  <script>
+    function goToProfile() {
+    window.location.href = 'profile.html';
+  }
+    function filterCourses() {
+      const input = document.getElementById('searchInput');
+      const filter = input.value.toLowerCase();
+      const cards = document.querySelectorAll('.card');
+
+      cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const description = card.querySelector('p').textContent.toLowerCase();
+        if (title.includes(filter) || description.includes(filter)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

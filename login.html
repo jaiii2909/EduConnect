@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduConnect - Login/Register</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+<div class="container">
+  <div class="toggle-buttons">
+    <button id="loginToggle" class="active">Login</button>
+    <button id="registerToggle">Register</button>
+  </div>
+
+  <div class="form-container">
+    <!-- Login Form -->
+    <form id="loginForm" class="form active" novalidate>
+      <h2>Welcome Back!</h2>
+      <input type="email" id="loginEmail" placeholder="Enter your email" required />
+      <span class="error" id="loginEmailError"></span>
+
+      
+      <input type="password" id="loginPassword" placeholder="Enter your password" required />
+      <span class="error" id="loginPasswordError"></span>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Register Form -->
+    <form id="registerForm" class="form" novalidate>
+      <h2>Create Your Account</h2>
+      <input type="text" id="name" placeholder="Enter your name" required />
+      <span class="error" id="nameError"></span>
+
+      <input type="email" id="registerEmail" placeholder="Enter your email" required />
+      <span class="error" id="registerEmailError"></span>
+
+      <select id="role" required>
+        <option value="">Select your role</option>
+        <option value="mentor">Mentor</option>
+        <option value="mentee">Mentee</option>
+      </select>
+      <span class="error" id="roleError"></span>
+      
+      <input type="text" id="skills" placeholder="Skills" required />
+      <span class="error" id="skillserror"></span>
+
+      <input type="password" id="registerPassword" placeholder="Create a password" required />
+      <span class="error" id="registerPasswordError"></span>
+
+      <input type="password" id="confirmPassword" placeholder="Confirm your password" required />
+      <span class="error" id="confirmPasswordError"></span>
+
+      
+
+      
+      <span class="error" id="roleError"></span>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</div>
+
+<script src="login.js" defer></script>
+</body>
+</html>

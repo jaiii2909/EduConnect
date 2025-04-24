@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #4e54c8;
+    }
+
+    #profile-container {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #f4f4f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .user-details {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .user-details h2 {
+      color: #4e54c8;
+      margin-top: 0;
+    }
+
+    .detail-item {
+      margin: 10px 0;
+    }
+
+    .detail-item strong {
+      color: #666;
+      display: inline-block;
+      width: 100px;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+
+    .error-message {
+      color: #ff4444;
+      padding: 10px;
+      background-color: #ffeeee;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Profile</h1>
+  
+  <div id="profile-container">
+    <div id="userDetails" class="user-details">
+      <!-- User details will be displayed here -->
+    </div>
+  </div>
+
+  <script>
+    // Load and display user details when page loads
+    document.addEventListener("DOMContentLoaded", () => {
+      const userId = localStorage.getItem("userId");
+      if (userId) {
+        fetchUserDetails(userId);
+      } else {
+        document.getElementById("userDetails").innerHTML = `
+          <div class="error-message">
+            No user ID found. Please log in to view your profile.
+          </div>
+        `;
+      }
+    });
+
+    function fetchUserDetails(userId) {
+      const userDetailsDiv = document.getElementById("userDetails");
+      userDetailsDiv.innerHTML = '<div class="loading">Loading user details...</div>';
+
+      fetch(`http://localhost:5000/api/profile?userId=${userId}`)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          if (data.error) {
+            throw new Error(data.error);
+          }
+          
+          userDetailsDiv.innerHTML = `
+            <h2>User Details</h2>
+            <div class="detail-item">
+              <strong>Name:</strong> ${data.name || 'Not provided'}
+            </div>
+            <div class="detail-item">
+              <strong>Email:</strong> ${data.email || 'Not provided'}
+            </div>
+            <div class="detail-item">
+              <strong>Role:</strong> ${data.role || 'Not provided'}
+            </div>
+            <div class="detail-item">
+              <strong>Skills:</strong> ${data.skills || 'Not provided'}
+            </div>
+          `;
+        })
+        .catch(error => {
+          userDetailsDiv.innerHTML = `
+            <div class="error-message">
+              Error loading user details: ${error.message}
+            </div>
+          `;
+          console.error('Error fetching user details:', error);
+        });
+    }
+  </script>
+</body>
+</html>

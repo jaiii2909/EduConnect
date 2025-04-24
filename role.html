@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduConnect - Select Role</title>
+  <link rel="stylesheet" href="role.css" />
+</head>
+<body>
+  <div class="role-container">
+    <h1>Welcome to EduConnect</h1>
+    <h2>Choose your role to continue</h2>
+
+    <div class="role-toggle">
+      <button id="menteeBtn" class="active">Mentee</button>
+      <button id="mentorBtn">Mentor</button>
+    </div>
+
+    <div class="role-display">
+      <p>You are signing up as a <strong id="selectedRole">Mentee</strong></p>
+    </div>
+
+    <button id="continueBtn">Continue</button>
+  </div>
+
+  <script>
+    const menteeBtn = document.getElementById('menteeBtn');
+    const mentorBtn = document.getElementById('mentorBtn');
+    const selectedRole = document.getElementById('selectedRole');
+    const continueBtn = document.getElementById('continueBtn');
+
+    let role = 'mentee';
+
+    menteeBtn.addEventListener('click', () => {
+      role = 'mentee';
+      menteeBtn.classList.add('active');
+      mentorBtn.classList.remove('active');
+      selectedRole.textContent = 'Mentee';
+    });
+
+    mentorBtn.addEventListener('click', () => {
+      role = 'mentor';
+      mentorBtn.classList.add('active');
+      menteeBtn.classList.remove('active');
+      selectedRole.textContent = 'Mentor';
+    });
+
+    continueBtn.addEventListener('click', () => {
+      // simulate page redirect
+      alert(`Proceeding to Login/Register as a ${role.charAt(0).toUpperCase() + role.slice(1)}`);
+      window.location.href = `login.html?role=${role}`; // future page
+    });
+  </script>
+</body>
+</html>
