@@ -1,4 +1,4 @@
-
+u
 # EduConnect
 
 **EduConnect** is a web platform designed to bridge the gap between **mentors** and **mentees** by providing a simple, intuitive interface for connection and collaboration. Built with **Node.js**, **Express**, and **MongoDB**, it enables users to register, log in, and connect based on shared skills and interests.
@@ -37,38 +37,6 @@ EduConnect/
 ├── server.js               # Main backend server
 └── README.md
 ```
-
----
-
-## ⚙️ Setup Instructions
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/educonnect.git
-   cd educonnect
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Setup environment variables**
-
-   Create a `.env` file in the root directory and add your MongoDB URI:
-   ```
-   MONGO_URI=mongodb://localhost:27017/educonnect
-   ```
-
-4. **Start the server**
-   ```bash
-   npm start
-   ```
-
-5. **Access the app**  
-   Open your browser and navigate to `http://localhost:5000`
-
----
 
 ## 👨‍💻 Contributing
 
