@@ -1,6 +1,3 @@
-Here’s a clean and professional `README.md` file tailored for your EduConnect project. You can tweak it further based on specific features or deployment instructions:
-
----
 
 # EduConnect
 
@@ -76,7 +73,3 @@ EduConnect/
 ## 👨‍💻 Contributing
 
 Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.
-
----
-
-Let me know if you want to include screenshots, a live demo link, or deployment steps (e.g., for Heroku, Vercel, etc.)!
